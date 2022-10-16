@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Title</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<style>
+    body{
+        background: #363636;
+    }
+    h1 {
+        color: #f6f6f6;
+    }
+    h2 {
+        color: #f6f6f6;
+    }
+    label {
+        color: #f6f6f6;
+    }
+</style>
+
+<body>
+    <h1>Калькулятор</h1>
+    <form action="/" method="post">
+        <input type="number" placeholder="Первое число" name="a">
+        <input type="number" placeholder="Второе число" name="b">
+        <label for="calc">Выбрать действие</label>
+        <select name="action" id="calc">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+        </select> <br>
+        <input type="submit" value="Получить результат">
+    </form>
+<h2 th:text="${result}"></h2>
+</body>
+</html>
